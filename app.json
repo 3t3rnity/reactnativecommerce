@@ -1,0 +1,15 @@
+{
+  "name": "reactnativeapp",
+  "displayName": "reactnativeapp",
+  "expo": {
+    "name": "reactnativeapp",
+    "slug": "reactnativeapp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "io.expo.somnum"
+    }
+  }
+}

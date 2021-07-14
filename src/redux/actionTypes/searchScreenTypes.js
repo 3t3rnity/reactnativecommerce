@@ -1,0 +1,1 @@
+export const CHANGE_TABSTATE = "SEARCH_SCR/CHANGE_AUTH";

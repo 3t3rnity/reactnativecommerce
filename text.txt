@@ -1,0 +1,16 @@
+float temp = readTem(TEMP);
+    lcd.setCursor(1,0);
+  	lcd.print("Temperatura");
+  	lcd.setCursor(1,1);
+    lcd.print(temp);
+  if(temp > 0){	   
+  		digitalWrite(latchPin, LOW);  //Открываем передачу даных в микросхему 74HC595
+  		shiftOut(dataPin, clockPin, LSBFIRST, temp*10); //передаем даные на 74HC595 из масива segments[i] (i) последовательный номер елемента масива
+  		digitalWrite(latchPin, HIGH); //Закрываем передачу даных в микросхему 74HC595  	
+  }
+  else{
+    digitalWrite(latchPin, LOW);  //Открываем передачу даных в микросхему 74HC595
+  		shiftOut(dataPin, clockPin, LSBFIRST, 0); //передаем даные на 74HC595 из масива segments[i] (i) последовательный номер елемента масива
+  		digitalWrite(latchPin, HIGH);
+  }
+  delay(1000);
